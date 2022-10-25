@@ -1,5 +1,9 @@
 local plugins = {
 
+  ["wakatime/vim-wakatime"] = {},
+
+  ["github/copilot.vim"] = {},
+
   ["nvim-lua/plenary.nvim"] = { module = "plenary" },
 
   ["lewis6991/impatient.nvim"] = {},
