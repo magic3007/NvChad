@@ -87,6 +87,19 @@ local options = {
       "i",
       "s",
     }),
+    -- https://www.reddit.com/r/neovim/comments/sk70rk/using_github_copilot_in_neovim_tab_map_has_been
+    ["<C-g>"] = cmp.mapping(function(fallback)
+      cmp.mapping.abort()
+      local copilot_keys = vim.fn["copilot#Accept"]()
+      if copilot_keys ~= "" then
+        vim.api.nvim_feedkeys(copilot_keys, "i", true)
+      else
+        fallback()
+      end
+    end, {
+        "i",
+        "s",
+    }),
   },
   sources = {
     { name = "luasnip" },
