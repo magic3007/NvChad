@@ -1,4 +1,9 @@
 -- n, v, i, t = mode names
+-- n: normal
+-- v: visual
+-- i: insert
+-- t: terminal
+-- x: visual block
 
 local function termcodes(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
