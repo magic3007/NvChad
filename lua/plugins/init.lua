@@ -2,7 +2,11 @@ local plugins = {
 
   ["wakatime/vim-wakatime"] = {},
 
-  ["github/copilot.vim"] = {},
+  ["github/copilot.vim"] = {
+    config = function()
+      require "plugins.configs.copilot"
+    end,
+  },
 
   ["nvim-lua/plenary.nvim"] = { module = "plenary" },
 
